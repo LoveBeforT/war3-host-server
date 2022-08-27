@@ -1,3 +1,14 @@
+mod bootstrap;
+
+use bootstrap::init::init;
+
 fn main() {
-    println!("Hello, world!");
+    println!(
+        "Warcraft III Host Server v{} by {}",
+        env!("CARGO_PKG_VERSION"),
+        env!("CARGO_PKG_AUTHORS")
+    );
+
+    init();
+
 }
