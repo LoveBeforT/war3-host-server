@@ -14,4 +14,4 @@ fi
 cp config/* output/
 cp script/* output/
 
-cargo clean
+# cargo clean

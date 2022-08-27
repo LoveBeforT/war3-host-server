@@ -1,7 +1,8 @@
+use log::info;
 use crate::constants;
 
-pub fn initconfig() {
-    println!("reading {} ...", constants::CONFIG_FILENAME);
+pub fn init_config() {
+    info!("reading {} ...", constants::CONFIG_FILENAME);
 
 
 }

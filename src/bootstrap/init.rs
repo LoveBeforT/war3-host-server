@@ -1,9 +1,11 @@
-use crate::bootstrap::config;
+use log::info;
+use crate::bootstrap::{config, logger};
 
 pub fn init() {
-    println!("initializing server configuration...");
+    logger::init_logger();
 
-    config::initconfig();
+    info!("initializing server configuration...");
+    config::init_config();
+    info!("server configuration done");
 
-    println!("initialized server configuration");
 }

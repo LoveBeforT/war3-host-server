@@ -1,6 +1,7 @@
 mod bootstrap;
 mod constants;
 
+use log::{info, error, debug};
 use bootstrap::init::init;
 
 fn main() {
@@ -11,5 +12,4 @@ fn main() {
     );
 
     init();
-
 }

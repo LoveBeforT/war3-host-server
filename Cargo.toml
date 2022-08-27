@@ -8,4 +8,5 @@ authors = ["KouKouChan"]
 
 [dependencies]
 log = "0.4"
+log4rs = "1.1.1"
 rust-ini = "0.17"
