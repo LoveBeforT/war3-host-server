@@ -1,5 +1,5 @@
 use std::io::{stdout, Write};
-use log::{info};
+use log::info;
 
 use crate::constants::GAME_VERSION;
 
@@ -31,21 +31,13 @@ impl Console {
                     let cmd = cmds[0].trim();
                     match cmd {
                         "maplist" => {
-                            println!("unimplemented command")
+                            self.maplist();
                         }
                         "map" => {
                             println!("unimplemented command")
                         }
                         "version" => {
-                            println!(
-                                "\nWarcraft III Host Server v{} by {}",
-                                env!("CARGO_PKG_VERSION"),
-                                env!("CARGO_PKG_AUTHORS")
-                            );
-                            println!(
-                                "supported game version is {}\n",
-                                GAME_VERSION
-                            );
+                            self.version();
                         }
                         "help" => {
                             self.help();
@@ -63,6 +55,22 @@ impl Console {
         }
 
         info!("console exited")
+    }
+
+    pub fn maplist(&self) {
+        println!("unimplemented command")
+    }
+
+    pub fn version(&self) {
+        println!(
+            "\nWarcraft III Host Server v{} by {}",
+            env!("CARGO_PKG_VERSION"),
+            env!("CARGO_PKG_AUTHORS")
+        );
+        println!(
+            "supported game version is {}\n",
+            GAME_VERSION
+        );
     }
 
     pub fn help(&self) {
