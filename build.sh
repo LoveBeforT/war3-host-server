@@ -12,5 +12,6 @@ else
 fi
 
 cp config/* output/
+cp script/* output/
 
 cargo clean
