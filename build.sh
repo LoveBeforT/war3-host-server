@@ -2,6 +2,7 @@ cd `dirname $0` && pwd
 
 rm -rf output/
 mkdir output/
+mkdir output/maps
 
 if [ ! -n "$1" ] ;then
     cargo build
@@ -13,5 +14,6 @@ fi
 
 cp config/* output/
 cp script/* output/
+cp maps/* output/maps
 
 # cargo clean

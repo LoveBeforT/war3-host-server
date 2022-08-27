@@ -1,15 +1,19 @@
 mod bootstrap;
 mod constants;
+mod server;
+mod command;
 
-use log::{info, error, debug};
 use bootstrap::init::init;
+use command::handler::Console;
 
 fn main() {
     println!(
-        "Warcraft III Host Server v{} by {}",
+        "Warcraft III Host Server v{} by {}\n",
         env!("CARGO_PKG_VERSION"),
         env!("CARGO_PKG_AUTHORS")
     );
 
     init();
+
+    Console::new().run();
 }
