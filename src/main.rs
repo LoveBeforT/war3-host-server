@@ -2,6 +2,7 @@ mod bootstrap;
 mod constants;
 mod server;
 mod command;
+mod configuration;
 
 use bootstrap::init::init;
 use command::handler::Console;
