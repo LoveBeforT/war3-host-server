@@ -1,3 +1,5 @@
+// credit goes to Ghost++ project
+
 pub const W3GS_HEADER_CONSTANTT:u8 = 247;   // 0xf7
 
 pub const W3GS_PING_FROM_HOST:u8 = 1;	    // 0x01
